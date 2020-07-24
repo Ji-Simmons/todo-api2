@@ -20,13 +20,15 @@ server.use(cors());
 server.use(express.json());
 
 // import your DAO things
-const Todo = require('./api/todo/todo.dao');
+const Lists = require('./api/lists/lists.dao');
+const Tasks = require('./api/tasks/tasks.dao');
 
 // import what is essential our router factory function
 const routerFactory = require('./api/router');
 
 // Route
-server.use('/', routerFactory(Todo));
+server.use('/', routerFactory(Lists));
+server.use('/', routerFactory(Tasks));
 
 // get constants from my settings file
 let { PORT, dbName } = require("./config");
