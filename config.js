@@ -1,8 +1,8 @@
 require('dotenv').config();
-const dbName = 'todo';
+const DBNAME = 'todo';
 module.exports= {
    PORT: process.env.PORT || 5555,
-   dbName,
+   DBNAME,
    APPNAME: 'Todo',
-   DBURI: `mongodb+srv://${process.env.DBUSERNAME}:${process.env.DBPASSWORD}@cluster0-mznto.mongodb.net/${dbName}?retryWrites=true&w=majority`,  
+   DBURI: `mongodb+srv://${process.env.DBUSERNAME}:${process.env.DBPASSWORD}@blog-z710y.mongodb.net/${DBNAME}?retryWrites=true&w=majority`,  
 }
